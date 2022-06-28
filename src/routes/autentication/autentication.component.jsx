@@ -4,16 +4,14 @@ import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
+import "./autentication.styles.scss";
 
 const Autentication = () => {
-  
-
   return (
-    <>
-      <h1>Sign in Page</h1>
+    <div className="authentication-container">
       <SignInForm />
       <SignUpForm />
-    </>
+    </div>
   );
 };
 
