@@ -10,8 +10,7 @@ import {
   selectCartTotal,
 } from "../../store/cart/cart.selector";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
-
-import React from "react";
+import PaymentForm from "../../components/payment-form/payment-form.component";
 
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
@@ -41,6 +40,7 @@ const Checkout = () => {
         return <CheckoutItem key={cartitem.id} cartItem={cartitem} />;
       })}
       <Total>Total: ${cartTotal}</Total>
+      <PaymentForm />
     </CheckoutContainer>
   );
 };
